@@ -60,7 +60,7 @@ std:stringstream ss (sSentence);
 
   for (int i = 0; i < vecWords.size (); i++)
     {
-      std::cout << vecWords[i] << endl;
+      std::cout << vecWords[i] << std::endl;
     }
     
     //more vectors
@@ -69,11 +69,11 @@ std:stringstream ss (sSentence);
     std::iota(std::begin(aVec), std:: end(aVec), 0);
     
     for(int i = 0; i < aVec.size(); ++i){
-        std::cout << aVec[i] << endl;
+        std::cout << aVec[i] << std::endl;
     }
 
     //cycle through values in vector
-    for(auto y: aVec) std::cout << y << endl;
+    for(auto y: aVec) std::cout << y << std::endl;
     
     int val = 8;
     if((val % 2) == 0){
@@ -86,7 +86,7 @@ std:stringstream ss (sSentence);
     //even values
     
     for((auto y: aVec) % 2 == 0){
-        std::cout << "these are even" << endl;
+        std::cout << "these are even" << std::endl;
     }
     
     std::vector<int> evenVec(10);
@@ -94,7 +94,7 @@ std:stringstream ss (sSentence);
     
     for(int i = 1; i < evenVec.size(); ++i){
         if(evenVec.size[i] % 2 == 0){
-            std::cout << "these are even" << endl;
+            std::cout << "these are even" << std::endl;
         }
     }
     
@@ -111,11 +111,11 @@ std:stringstream ss (sSentence);
     //New Age is 43, not 24
     int age = 43;
     AssignAge(age);
-    std::cout <<"New Age " << age << endl;
+    std::cout <<"New Age " << age << std::endl;
     return 0;
     
     age = AssignAge2(age);
-    std::cout << "Returned Age " << age << endl;
+    std::cout << "Returned Age " << age << std::endl;
 }
 
 //functions
