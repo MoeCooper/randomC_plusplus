@@ -14,20 +14,43 @@ Write your code in this editor and press "Run" button to compile and execute it.
 #include <limits>
 #include <numeric>
 
-
 void AssignAge(int age);
 int AssignAge2(int age);
 
 double AddNumbers(double num1, double num2);
 
 main (){
-
+  
   //pointers store addresses locations in memory where data is stored
   int age = 43;
   int* pAge = NULL;
     
   //reference operator
   pAge = &age;
+  
+  //returns hexadecimal number(*base 16)
+  std::cout << "Address: " << pAge << std::endl;
+    
+  std::cout << "Value at address: " << *pAge << std::endl;
+    
+  std::cout <<"********************************************" << std::endl;
+    
+  //pointers in arrays can be poiinted at just the array, not each index
+  //cycles through arrays with pointers
+  int intArray[] = {1,2,3,4};
+  int* pIntArray = intArray;
+    
+  std::cout << "1st: " << *pIntArray << " Address " << pIntArray << std::endl;
+  pIntArray++;
+    
+  std::cout << "2nd: " << *pIntArray << " Address " << pIntArray << std::endl;
+  pIntArray++;
+    
+  std::cout << "3rd: " << *pIntArray << " Address " << pIntArray << std::endl;
+  pIntArray++;
+    
+  std::cout << "4th: " << *pIntArray << " Address " << pIntArray << std::endl;
+  pIntArray++;
     
   //returns hexadecimal number(*base 16)
   std::cout << "Address: " << pAge << std::endl;
@@ -61,7 +84,7 @@ main (){
   //converting a string into a vector and outputting information
   std::string sSentence = "This is a sentence string";
   std::vector < std::string > vecWords;
-std:stringstream ss (sSentence);
+  std:stringstream ss (sSentence);
   std::string sIndividualStr;
   char sSpace = " ";
 
