@@ -22,6 +22,18 @@ double AddNumbers(double num1, double num2);
 
 main (){
 
+  //pointers store addresses locations in memory where data is stored
+  int age = 43;
+  int* pAge = NULL;
+    
+  //reference operator
+  pAge = &age;
+    
+  //returns hexadecimal number(*base 16)
+  std::cout << "Address: " << pAge << std::endl;
+    
+  std::cout << "Value at address: " << *pAge << std::endl;
+
   int arrNums[10] = { 1 };
 
   int arrNums2[] = { 1, 2, 3 };
