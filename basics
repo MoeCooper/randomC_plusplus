@@ -1,0 +1,142 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <iostream>
+#include <string>
+#include <cstdlib>
+#include <vector>
+#include <sstream>
+#include <limits>
+#include <numeric>
+
+
+void AssignAge(int age);
+int AssignAge2(int age);
+
+double AddNumbers(double num1, double num2);
+
+main (){
+
+  int arrNums[10] = { 1 };
+
+  int arrNums2[] = { 1, 2, 3 };
+
+  int arrNums3[5] = { 8, 9 };
+
+  std::cout << "1st value : " << arrNums[0] << std::endl;
+
+  std::cout << "Array size : " << sizeof (*arrNums3) << std::endl;
+
+  //pages, columns, rows
+  int arrNums4[2][2][2] = { {{1, 2}, {3, 4}},
+  {{5, 6}, {7, 8}}
+  };
+
+  std::cout << arrNums4[1][1][1] << std::endl;
+
+  std::vector < double >RandNums (2);
+  RandNums[0] = 10.0;
+  RandNums[1] = 20;
+  RandNums.push_back (30.0);
+  std::cout << "last index : " << RandNums[RandNums.size () - 1] << std::endl;
+
+
+  //converting a string into a vector and outputting information
+  std::string sSentence = "This is a sentence string";
+  std::vector < std::string > vecWords;
+std:stringstream ss (sSentence);
+  std::string sIndividualStr;
+  char sSpace = " ";
+
+  while (getline (ss, sIndividualStr, sSpace))
+    {
+      vecWords.push_back (sIndividualStr);
+    }
+
+  for (int i = 0; i < vecWords.size (); i++)
+    {
+      std::cout << vecWords[i] << endl;
+    }
+    
+    //more vectors
+    
+    std::vector<int> aVec(10);
+    std::iota(std::begin(aVec), std:: end(aVec), 0);
+    
+    for(int i = 0; i < aVec.size(); ++i){
+        std::cout << aVec[i] << endl;
+    }
+
+    //cycle through values in vector
+    for(auto y: aVec) std::cout << y << endl;
+    
+    int val = 8;
+    if((val % 2) == 0){
+        std::cout << val << " is even\n";
+    } else {
+        std::cout << val << " is odd \n";
+    }
+
+
+    //even values
+    
+    for((auto y: aVec) % 2 == 0){
+        std::cout << "these are even" << endl;
+    }
+    
+    std::vector<int> evenVec(10);
+    std::iota(std::begin(evenVec), std::end(evenVec), 1);
+    
+    for(int i = 1; i < evenVec.size(); ++i){
+        if(evenVec.size[i] % 2 == 0){
+            std::cout << "these are even" << endl;
+        }
+    }
+    
+    //aads numbers
+    double num1, num2'
+    std::cout << "First Number : ";
+    std::cin >> num1;
+    
+    std::cout << "Number 2 : ";
+    std::cin >> num2;
+    
+    printf("%.1f + %.1f = %.1f\n", num1, num2, AddNumbers(num1, num2));
+    
+    //New Age is 43, not 24
+    int age = 43;
+    AssignAge(age);
+    std::cout <<"New Age " << age << endl;
+    return 0;
+    
+    age = AssignAge2(age);
+    std::cout << "Returned Age " << age << endl;
+}
+
+//functions
+
+void AssignAge(int age){
+    age = 24;
+}
+
+int AssignAge2(int age){
+    age = 24;
+    return age;
+}
+
+double AddNumbers(double num1, double num2){
+    return num1 + num2;
+}
+
+
+
+
+
+
+
+
