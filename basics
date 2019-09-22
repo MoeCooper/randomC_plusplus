@@ -1,11 +1,3 @@
-/******************************************************************************
-
-                              Online C++ Compiler.
-               Code, Compile, Run and Debug C++ program online.
-Write your code in this editor and press "Run" button to compile and execute it.
-
-*******************************************************************************/
-
 #include <iostream>
 #include <string>
 #include <cstdlib>
@@ -19,7 +11,7 @@ int AssignAge2(int age);
 
 double AddNumbers(double num1, double num2);
 
-main (){
+int main (){
   
   //pointers store addresses locations in memory where data is stored
   int age = 43;
@@ -151,6 +143,8 @@ main (){
     
     age = AssignAge2(age);
     std::cout << "Returned Age " << age << std::endl;
+    
+    return 0;
 }
 
 //functions
@@ -168,7 +162,59 @@ double AddNumbers(double num1, double num2){
     return num1 + num2;
 }
 
+//Constructor Overloading
+//******************************************************
 
+class Person {
+private:
+  std::string name;
+  int age;
+
+public:
+  Person();
+  Person(std::string newName){
+    name = newName;
+    age = 0;
+  }
+  Person(std::string newName, int newAge);
+  std::string toString();
+};
+
+
+Person::Person(){
+  name = "undefined";
+  age = 0;
+}
+
+
+Person::Person(std::string newName, int newAge){
+  name = newName;
+  age = newAge;
+}
+
+
+std::string Person::toString(){
+  std::stringstream ss;
+
+  ss << "Name: ";
+  ss << name  << std::endl;
+  ss << "Age: ";
+  ss << age;
+
+  return ss.str();
+}
+
+int main() {
+  Person person1;
+  Person person2("Bob");
+  Person person3("John", 5);
+
+  std::cout << person1.toString() << std::endl;
+  std::cout << person2.toString() << std::endl;
+  std::cout << person3.toString() << std::endl;'
+  
+  return 0;
+}
 
 
 
