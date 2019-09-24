@@ -214,6 +214,32 @@ int main() {
   std::cout << person3.toString() << std::endl;'
   
   return 0;
+  
+  std::cout << "*******************************************************" << std::endl;
+  
+  int main(){
+  
+  //looping through an array with pointers
+    
+    std::string array1[] = {"one", "two", "three", "four", "five"};
+    
+    std::string *pValue = array1;
+    
+    std::string *pStart = &pValue[0];
+    std::string *pEnd = &pValue[4];
+    
+    while(true){
+        
+        std::cout << *pStart << " " << std::flush;
+        
+        if(pStart == pEnd){
+            break;
+        }
+        
+        pStart++;
+    }
+    
+    return 0;
 }
 
 
